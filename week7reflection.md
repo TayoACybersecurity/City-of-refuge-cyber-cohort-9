@@ -1,9 +1,9 @@
 # City of Refuge Cyber Cohort 9
 ---
-title: "Week 7 Reflection – Network+"
-author: "Tayo A."
-date: "2025-10-10"
-course: "CompTIA Network+"
+title: Week 7 Reflection – Network+
+author: Tayo A.
+date: 2025-10-10
+course: CompTIA Network+
 ---
 
 ## Reflection
