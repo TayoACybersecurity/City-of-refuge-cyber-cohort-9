@@ -1,4 +1,4 @@
-# Week 7 Reflection – City of Refuge Cyber Cohort
+# Week 7 Reflection – City of Refuge Cyber Cohort 9
 
 ## What Went Down
 This week we dug deep into networking, OSI model, IPs, routers, and real-world troubleshooting.  
