@@ -87,14 +87,18 @@ Visual Path:
 
    What I Learned:
 
-Latency under 20ms = Great for gaming/video calls
+Latency under 20ms = Great for gaming/video-calls
+
 12 hops = Typical for cross-country connection
+
 Some routers don't respond (*** timeout) = Normal security practice
 
 
 ## Lab 3: ChatGPT Troubleshooting Simulation
-Used AI to simulate broken network scenarios  
-Diagnosed DHCP and DNS issues using the OSI model  
+Used AI to simulate broken network scenarios
+
+Diagnosed DHCP and DNS issues using the OSI model 
+
 Practiced identifying which layer the problem sits on 
 
 ## ChatGPT Troubleshooting Simulation
@@ -122,6 +126,7 @@ Practiced identifying which layer the problem sits on
 
 
 DIAGNOSIS: APIPA address (169.254.x.x) = DHCP failure
+
 SOLUTION: Restart router or manually configure static IP
 
 ### Scenario 2: Can't Access Specific Website
