@@ -16,8 +16,8 @@ I’m blending technical skills with sourcing, AI tools, and real hands-on labs.
 **Week 7:** Networking fundamentals, OSI model, subnetting, and IoT home labs  
 
 **Certs In Progress:**  
- CompTIA Network+ (Q3 2025)  
- Security+ (Q4 2025)  
+ CompTIA Network+ (Q3/Q4 2025)  
+ Security+ (Q1 2026)  
 
 ---
 
