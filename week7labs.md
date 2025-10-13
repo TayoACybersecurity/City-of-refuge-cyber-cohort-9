@@ -24,8 +24,6 @@ INTERNET
                  [ROUTER/MODEM]
                   192.168.1.1
                   (DHCP Server) 
-        ________________________________
-       |       |       |       |       |
     [Laptop] [Phone] [Smart] [Ring]  [Alexa]
    .1.45    .1.32    TV     Doorbell  .1.28
                     .1.50   .1.48
@@ -103,27 +101,25 @@ Practiced identifying which layer the problem sits on
 
 ### Scenario 1: No Internet Access
 
-#### Troubleshooting Using OSI Model
-
-─────────────────────────────────────────────────────────────
+#### Troubleshooting Using OS
   OSI Layer        Test Performed              Result        
-─────────────────────────────────────────────────────────────
+
   Layer 7          Can browse websites?         No         
   (Application)                                               
-─────────────────────────────────────────────────────────────
+
   Layer 4          Ports open?                  Yes        
   (Transport)                                                 
-─────────────────────────────────────────────────────────────
+
   Layer 3          Valid IP address?           No 169.254.x  
   (Network)        Can ping gateway?            No         
                    ← PROBLEM FOUND HERE                       
-─────────────────────────────────────────────────────────────
+
   Layer 2          Network adapter enabled?     Yes        
   (Data Link)                                                 
-─────────────────────────────────────────────────────────────
+
   Layer 1          Cable plugged in?            Yes        
   (Physical)       Link light on?               Yes        
-─────────────────────────────────────────────────────────────
+
 
 DIAGNOSIS: APIPA address (169.254.x.x) = DHCP failure
 SOLUTION: Restart router or manually configure static IP
@@ -135,13 +131,13 @@ Result:  Success (Internet works)
 Test 2: ping google.com  
 Result:  Failed ("could not find host")
 
-     [My PC] can ping──> [8.8.8.8] 
-        can't resolve──> [google.com] 
+     [My PC] can ping - [8.8.8.8] 
+        can't resolve - [google.com] 
         
 DIAGNOSIS: DNS resolution failure
 SOLUTION: Change DNS to 8.8.8.8 (Google Public DNS)
 
-AI Prompts I Used:
+## AI Prompts I Used:
 
 "Act as a network troubleshooting simulator with OSI model steps"
 "Give me 5 scenarios where Layer 3 is the problem"
@@ -156,9 +152,9 @@ Subnetting Calculations (AI-Assisted)
 
 ### The Subnetting Cheat Sheet
 
-──────────────────────────────────────────────────────────────────
+
   CIDR    Subnet Mask        Total IPs    Usable IPs    Networks  
-──────────────────────────────────────────────────────────────────
+
   /24     255.255.255.0      256          254            1         
   /25     255.255.255.128    128          126            2         
   /26     255.255.255.192     64           62            4         
@@ -166,15 +162,68 @@ Subnetting Calculations (AI-Assisted)
   /28     255.255.255.240     16           14           16         
   /29     255.255.255.248      8            6           32         
   /30     255.255.255.252      4            2           64         
-──────────────────────────────────────────────────────────────────
 
 Formula: Usable IPs = (2^host bits) - 2
          (Subtract network address + broadcast address)
 
+         Given: 192.168.1.0/24
+Task: Create 4 equal subnets
+
+Solution:
+- Need 4 subnets → Borrow 2 bits (2² = 4)
+- New subnet: /26 (24 + 2)
+- Each subnet: 64 IPs (62 usable)
+
+### Practice Problem (AI-Generated)
+┌─────────────────────────────────────────────────────────────┐
+ Subnet 1: 192.168.1.0/26                                    
+  Network:    192.168.1.0                                   
+   First Host: 192.168.1.1                                   
+  Last Host:  192.168.1.62                                  
+   Broadcast:  192.168.1.63                                  
+├─────────────────────────────────────────────────────────────┤
+ Subnet 2: 192.168.1.64/26                                   
+   Network:    192.168.1.64                                  
+   First Host: 192.168.1.65                                  
+   Last Host:  192.168.1.126                                 
+   Broadcast:  192.168.1.127                                 
+├─────────────────────────────────────────────────────────────┤
+ Subnet 3: 192.168.1.128/26                                  
+   Network:    192.168.1.128                                 
+   First Host: 192.168.1.129                                 
+   Last Host:  192.168.1.190                                 
+   Broadcast:  192.168.1.191                                 
+├─────────────────────────────────────────────────────────────┤
+ Subnet 4: 192.168.1.192/26                                  
+   Network:    192.168.1.192                                 
+   First Host: 192.168.1.193                                 
+   Last Host:  192.168.1.254                                 
+   Broadcast:  192.168.1.255                                 
+└─────────────────────────────────────────────────────────────┘
+## How AI Helped:
+
+Generated 20 practice problems with solutions
+Checked my calculations instantly
+Explained my mistakes in simple terms
+
 ## Lab 5: IoT Home Lab Project
 Noticed IoT devices share my main WiFi  
 Plan to create a guest network or VLAN for them  
-Goal: Understand IoT security and how AI fits into home automation 
+Goal: Understand IoT security and how AI fits into home automation
+
+INTERNET
+                  
+                   [ROUTER]
+                  192.168.1.1
+        ┌───────────────┼───────────────┐
+                                      
+    [Laptop]      [Smart TV]      [Ring Doorbell]
+   (Personal)      (IoT)           (IoT - Cloud)
+        |               │               |
+        └───── Same Network = Risk ─────┘
+                        
+ PROBLEM: If IoT device gets hacked, attacker is 
+            on same network as my personal laptop
 
 ## Results
 After resolving the subnet mismatch, all devices communicated successfully. Learned to identify IP conflicts, verify gateway settings, and confirm routes using CLI tools.
