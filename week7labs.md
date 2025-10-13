@@ -1,4 +1,18 @@
-# Week 7 – Lab Notes (AI + IoT Focus)
+title: Week 7 Lab – IP Addressing & Subnetting
+author: Tayo A.
+date: 2025-10-10
+course: CompTIA Network+
+---
+
+## Objective
+To apply IP addressing and subnetting concepts by configuring a small local network, testing connectivity, and troubleshooting common issues.
+
+## Steps
+1. Created a simulated network with three PCs and one router using Cisco Packet Tracer.  
+2. Assigned static IPs and subnet masks to each device.  
+3. Verified connectivity using ping and tracert commands.  
+4. Introduced an intentional subnet error to test troubleshooting methods.  
+5. Adjusted configurations and restored full network communication.
 
 ## Lab 1: Understanding My Home Network
 Mapped all connected devices from router (192.168.1.1)
@@ -25,7 +39,15 @@ Helps me learn faster and document cleaner
 ## Lab 5: IoT Home Lab Project
 Noticed IoT devices share my main WiFi  
 Plan to create a guest network or VLAN for them  
-Goal: Understand IoT security and how AI fits into home automation  
+Goal: Understand IoT security and how AI fits into home automation 
+
+## Results
+After resolving the subnet mismatch, all devices communicated successfully. Learned to identify IP conflicts, verify gateway settings, and confirm routes using CLI tools.
+
+## Key Takeaway
+Subnetting isn’t just math .... it’s structure. It keeps network traffic organized, efficient, and predictable.  
+When it fails, everything downstream feels it.  
+Lesson locked: precision in setup saves hours in troubleshooting.
 
 **Time Spent:**
 Class: 6 hrs  
