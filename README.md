@@ -28,7 +28,7 @@ I’m blending technical skills with sourcing, AI tools, and real hands-on labs.
 ---
 
 ## Connect
-**LinkedIn:** [linkedin.com/in/ade-a-518a6a263](https://www.linkedin.com/in/ade-a-518a6a263/)  
+**LinkedIn:** https://www.linkedin.com/in/adetayo-a-518a6a263/
 **Email:** aaconsultn1@gmail.com  
 **Location:** Atlanta, GA  
 
