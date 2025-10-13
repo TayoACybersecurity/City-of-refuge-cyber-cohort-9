@@ -139,8 +139,10 @@ SOLUTION: Change DNS to 8.8.8.8 (Google Public DNS)
 
 ## AI Prompts I Used:
 
-"Act as a network troubleshooting simulator with OSI model steps"
-"Give me 5 scenarios where Layer 3 is the problem"
+"Act as a network troubleshooting simulator with OSI model steps", 
+
+"Give me 5 scenarios where Layer 3 is the problem",
+
 "Create a troubleshooting flowchart for common home network issues"
 
 ## Lab 4: AI-Powered Study Partner
