@@ -34,4 +34,4 @@ I’m blending technical skills with sourcing, AI tools, and real hands-on labs.
 
 ---
 
-*Last updated: [10/12/2025] *
+Last updated: [10/12/2025] 
