@@ -112,7 +112,7 @@ Practiced identifying which layer the problem sits on
 
   Layer 3          Valid IP address?           No 169.254.x  
   (Network)        Can ping gateway?            No         
-                   ← PROBLEM FOUND HERE                       
+                                         
 
   Layer 2          Network adapter enabled?     Yes        
   (Data Link)                                                 
