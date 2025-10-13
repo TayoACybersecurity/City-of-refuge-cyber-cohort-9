@@ -211,19 +211,6 @@ Noticed IoT devices share my main WiFi
 Plan to create a guest network or VLAN for them  
 Goal: Understand IoT security and how AI fits into home automation
 
-INTERNET
-                  
-                   [ROUTER]
-                  192.168.1.1
-        ┌───────────────┼───────────────┐
-                                      
-    [Laptop]      [Smart TV]      [Ring Doorbell]
-   (Personal)      (IoT)           (IoT - Cloud)
-        |               │               |
-        └───── Same Network = Risk ─────┘
-                        
- PROBLEM: If IoT device gets hacked, attacker is 
-            on same network as my personal laptop
 
 ## Results
 After resolving the subnet mismatch, all devices communicated successfully. Learned to identify IP conflicts, verify gateway settings, and confirm routes using CLI tools.
